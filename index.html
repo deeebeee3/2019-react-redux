@@ -19,7 +19,7 @@
         return {count: state.count}
     }
     
-    const WrappedCounter = ReactRedux.connect(mapStateToProps)(Counter);
+    const WrappedCounter = ReactRedux.connect(mapStateToProps, {inc:increment, dec: decrement})(Counter);
     
     
     // Only change code *before* me!
