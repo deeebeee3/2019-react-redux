@@ -5,12 +5,12 @@
     const decrement = () => ({ type: 'decrement' });
     
     
-    const Counter = () => {
+    const Counter = (props) => {
         return (
             <div>
                 <button className="increment">Increment</button>
                 <button className="decrement">Decrement</button>
-                Current Count: <span>0</span>
+                Current Count: <span>{props.count}</span>
             </div>
         );
     };
