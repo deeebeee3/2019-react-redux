@@ -8,8 +8,8 @@
     const Counter = (props) => {
         return (
             <div>
-                <button className="increment">Increment</button>
-                <button className="decrement">Decrement</button>
+                <button className="increment" onClick={() => {props.inc()}}>Increment</button>
+                <button className="decrement" onClick={() => {props.dec()}}>Decrement</button>
                 Current Count: <span>{props.count}</span>
             </div>
         );
@@ -19,7 +19,7 @@
         return {count: state.count}
     }
     
-    const WrappedCounter = ReactRedux.connect(mapStateToProps, {inc:increment, dec: decrement})(Counter);
+    const WrappedCounter = ReactRedux.connect(mapStateToProps, {inc: increment, dec: decrement})(Counter);
     
     
     // Only change code *before* me!
