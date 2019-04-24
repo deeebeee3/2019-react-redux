@@ -15,7 +15,11 @@
         );
     };
     
-    const WrappedCounter = ReactRedux.connect()(Counter);
+    const mapStateToProps = (state) => {
+        return {count: state.count}
+    }
+    
+    const WrappedCounter = ReactRedux.connect(mapStateToProps)(Counter);
     
     
     // Only change code *before* me!
